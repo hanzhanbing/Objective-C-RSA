@@ -8,16 +8,6 @@
 
 @implementation RSA
 
-/*
-static NSString *base64_encode(NSString *str){
-	NSData* data = [str dataUsingEncoding:NSUTF8StringEncoding];
-	if(!data){
-		return nil;
-	}
-	return base64_encode_data(data);
-}
-*/
-
 static NSString *base64_encode_data(NSData *data){
 	data = [data base64EncodedDataWithOptions:0];
 	NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
